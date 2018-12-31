@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 const app = express();
 const FACT_URL = "https://catfact.ninja/fact";
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
   fetch(FACT_URL)
